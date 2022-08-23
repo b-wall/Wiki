@@ -1,0 +1,15 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+Encyclopedia - {{ searchparam }}
+{% endblock %}
+
+{% block body %}
+
+<a href="{% url 'wiki:edit' title %}" class="btn btn-info" id="edit-button">Edit</a>
+
+{{ displaytitle|safe }}
+
+{{ page|safe }}
+
+{% endblock %}
